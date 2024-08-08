@@ -1,0 +1,25 @@
+<img
+  [src]="user.avatar"
+  alt="{{ user.first_name }}"
+  class="rounded-full w-48 h-48 mx-auto mb-6"
+/>
+<h2 class="text-4xl font-bold mb-2">
+  {{ user.first_name }} {{ user.last_name }}
+</h2>
+<p class="text-xl text-gray-700 mb-4">{{ user.email }}</p>
+<div class="text-left mx-auto w-3/4">
+  <p class="text-lg">
+    <span class="font-semibold">Job Title:</span> Software Engineer
+  </p>
+  <p class="text-lg">
+    <span class="font-semibold">Location:</span> San Francisco, CA
+  </p>
+  <p class="text-lg">
+    <span class="font-semibold">Phone:</span> (555) 123-4567
+  </p>
+  <p class="text-lg">
+    <span class="font-semibold">About:</span> Passionate about creating
+    impactful software solutions. Experienced in Angular, TypeScript, and
+    full-stack development.
+  </p>
+</div>

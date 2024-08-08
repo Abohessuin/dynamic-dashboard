@@ -1,0 +1,35 @@
+<ul class="flex justify-center items-center space-x-2">
+  <li>
+    <a
+      (click)="onPageChange(currentPage - 1)"
+      [class.opacity-50]="currentPage === 1"
+      [class.cursor-not-allowed]="currentPage === 1"
+      class="block py-2 px-3 border rounded cursor-pointer"
+      [class.bg-gray-200]="currentPage === 1"
+    >
+      &lt;
+    </a>
+  </li>
+  <li *ngFor="let page of pages">
+    <a
+      (click)="onPageChange(page)"
+      [class.bg-blue-500]="page === currentPage"
+      [class.text-white]="page === currentPage"
+      [class.border-blue-500]="page === currentPage"
+      class="block py-2 px-3 border rounded cursor-pointer"
+    >
+      {{ page }}
+    </a>
+  </li>
+  <li>
+    <a
+      (click)="onPageChange(currentPage + 1)"
+      [class.opacity-50]="currentPage === totalPages"
+      [class.cursor-not-allowed]="currentPage === totalPages"
+      class="block py-2 px-3 border rounded cursor-pointer"
+      [class.bg-gray-200]="currentPage === totalPages"
+    >
+      &gt;
+    </a>
+  </li>
+</ul>

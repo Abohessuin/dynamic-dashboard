@@ -1,0 +1,11 @@
+<div
+  class="w-full p-4 border rounded cursor-pointer"
+  (click)="navigateToUser(user.id)"
+>
+  <img
+    [src]="user.avatar"
+    alt="{{ user.first_name }}"
+    class="rounded-full w-16 h-16"
+  />
+  <p>{{ user.first_name }} {{ user.last_name }}</p>
+</div>

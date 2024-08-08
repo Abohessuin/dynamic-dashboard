@@ -1,0 +1,46 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+  <div class="w-full max-w-2xl bg-white shadow-md rounded-lg p-6 text-center">
+    <button (click)="goBack()" class="text-blue-500 underline mb-6 text-lg">
+      &larr; Back
+    </button>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="first_name" class="block text-left">First Name</label>
+        <input
+          id="first_name"
+          formControlName="first_name"
+          class="p-2 border rounded w-full"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="last_name" class="block text-left">Last Name</label>
+        <input
+          id="last_name"
+          formControlName="last_name"
+          class="p-2 border rounded w-full"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-left">Email</label>
+        <input
+          id="email"
+          formControlName="email"
+          class="p-2 border rounded w-full"
+        />
+      </div>
+      <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">
+        Save
+      </button>
+      <button
+        type="button"
+        (click)="goBack()"
+        class="bg-gray-500 text-white py-2 px-4 rounded ml-2"
+      >
+        Cancel
+      </button>
+    </form>
+    <div *appLoadingSpinner="loading" class="text-center p-4">
+      <mat-spinner></mat-spinner>
+    </div>
+  </div>
+</div>

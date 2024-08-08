@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="relative min-h-[400px] p-4">
+  <div *ngIf="!loading" class="grid grid-cols-3 gap-4">
+    <app-user-card
+      *ngFor="let user of users"
+      [user]="user"
+      appHoverHighlight
+    ></app-user-card>
+  </div>
+  <div class="absolute bottom-[0px] left-[45%] mt-4">
+    <app-pagination
+      [totalItems]="totalItems"
+      [currentPage]="page"
+      [itemsPerPage]="itemsPerPage"
+      (pageChange)="onPageChange($event)"
+    >
+    </app-pagination>
+  </div>
+  <div *ngIf="loading" class="absolute top-[50%] left-[50%] p-4">
+    <mat-spinner color="primary"></mat-spinner>
+  </div>
+</div>

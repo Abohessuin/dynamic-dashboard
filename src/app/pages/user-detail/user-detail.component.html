@@ -1,0 +1,17 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+  <div
+    class="w-full max-w-[800px] bg-white shadow-md rounded-lg p-6 text-center"
+  >
+    <button (click)="goBack()" class="text-blue-500 underline mb-6 text-lg">
+      &larr; Back
+    </button>
+    <app-user-detail-card *ngIf="user" [user]="user"></app-user-detail-card>
+    <button
+      *ngIf="user"
+      (click)="navigateToEdit()"
+      class="bg-blue-500 text-white py-2 px-4 rounded mt-4"
+    >
+      Edit
+    </button>
+  </div>
+</div>
